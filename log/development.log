@@ -1,0 +1,4408 @@
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 10:09:37) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 10:09:43) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"39"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 39) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 39) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 31) [0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 48[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 49[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 50[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 31[0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 32) [0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 32[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 39[0m
+Redirected to http://localhost:3000/surveys
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/surveys/39]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 10:09:43) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 10:09:45) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 250ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:10:04) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"s1", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdas"}, "1"=>{"_delete"=>"", "content"=>"sfsa"}, "2"=>{"_delete"=>"", "content"=>"sfs"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"saf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdsa"}, "1"=>{"_delete"=>"", "content"=>"sfs"}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: s1
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdas
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sfsa
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sfs
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: saf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (16.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 's1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (62.0ms)
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:10:21) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"s2", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdas"}, "1"=>{"_delete"=>"", "content"=>"sfsa"}, "2"=>{"_delete"=>"", "content"=>"sfs"}}, "_delete"=>"", "content"=>"saf"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: s2
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdas
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sfsa
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sfs
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: saf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 's2') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('s2', '2010-04-02 04:40:21', '2010-04-02 04:40:21')[0m
+  [4;35;1mQuestion Create (15.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 04:40:21', 40, 'saf', '2010-04-02 04:40:21')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:40:21', 33, 'sdas', '2010-04-02 04:40:21')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:40:21', 33, 'sfsa', '2010-04-02 04:40:21')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:40:21', 33, 'sfs', '2010-04-02 04:40:21')[0m
+Redirected to http://localhost:3000/surveys/40
+Completed in 391ms (DB: 15) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 10:10:21) [GET]
+  Parameters: {"id"=>"40"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 40) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 40) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 33) [0m
+Completed in 172ms (View: 156, DB: 0) | 200 OK [http://localhost/surveys/40]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 10:11:50) [GET]
+  [4;36;1mSurvey Load (16.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 10:11:52) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (110.0ms)
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:12:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"product", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"qw"}, "1"=>{"_delete"=>"", "content"=>"qw"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"qewe"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"qwe"}, "1"=>{"_delete"=>"", "content"=>"ewwr"}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: product
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: qewe
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'product') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (47.0ms)
+Rendered surveys/_form (172.0ms)
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:12:35) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"product", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"qw"}, "1"=>{"_delete"=>"", "content"=>"qw"}}, "_delete"=>"", "content"=>"qewe"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: product
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: qewe
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'product') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (62.0ms)
+Completed in 250ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:12:42) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"product", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"qw"}, "1"=>{"_delete"=>"", "content"=>"qw"}}, "_delete"=>"", "content"=>"qewe"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: product
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: qw
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: qewe
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'product') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (62.0ms)
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 10:12:49) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 10:12:51) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (32.0ms)
+Rendered surveys/_question_fields (172.0ms)
+Rendered surveys/_answer_fields (32.0ms)
+Rendered surveys/_answer_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (109.0ms)
+Rendered surveys/_answer_fields (125.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (156.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (469.0ms)
+Completed in 516ms (View: 485, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:13:10) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fds"}, "1"=>{"_delete"=>"", "content"=>"dsf"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"sfsd"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdf"}, "1"=>{"_delete"=>"", "content"=>"dsf"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: sfsd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (62.0ms)
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:13:26) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fds"}, "1"=>{"_delete"=>"", "content"=>"dsf"}}, "_delete"=>"", "content"=>"sfsd"}, "1270183399361"=>{"answers_attributes"=>{"1270183403841"=>{"_delete"=>"", "content"=>"bcb"}}, "_delete"=>"", "content"=>"dsgd"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: sfsd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: bcb
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: dsgd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (78.0ms)
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:13:41) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fds"}, "1"=>{"_delete"=>"", "content"=>"dsf"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"sfsd"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdf"}, "1"=>{"_delete"=>"", "content"=>"dsf"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"xbcxbc"}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: sfsd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: xbcxbc
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (79.0ms)
+Completed in 375ms (View: 79, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 10:13:55) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fds"}, "1"=>{"_delete"=>"", "content"=>"dsf"}}, "_delete"=>"", "content"=>"sfsd"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdf"}, "1"=>{"_delete"=>"", "content"=>"dsf"}}, "_delete"=>"", "content"=>"xbcxbc"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: sfsd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: xbcxbc
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sf') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('sf', '2010-04-02 04:43:55', '2010-04-02 04:43:55')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 41, 'sfsd', '2010-04-02 04:43:55')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 34, 'fds', '2010-04-02 04:43:55')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 34, 'dsf', '2010-04-02 04:43:55')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 41, 'xbcxbc', '2010-04-02 04:43:55')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 35, 'sdf', '2010-04-02 04:43:55')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 04:43:55', 35, 'dsf', '2010-04-02 04:43:55')[0m
+Redirected to http://localhost:3000/surveys/41
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 10:13:55) [GET]
+  Parameters: {"id"=>"41"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 41) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 41) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 34) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 35) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/surveys/41]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 10:14:05) [GET]
+  [4;36;1mSurvey Load (15.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 47, DB: 15) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:02:45) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:02:48) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"41"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 41) [0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 41) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 34) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 54[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 55[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 34[0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 35) [0m
+  [4;35;1mAnswer Destroy (16.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 56[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 57[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 35[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 41[0m
+Redirected to http://localhost:3000/surveys
+Completed in 156ms (DB: 16) | 302 Found [http://localhost/surveys/41]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:02:48) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:02:49) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (110.0ms)
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:03:04) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sffs", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"dgdg"}, "1"=>{"_delete"=>"", "content"=>"dgdsg"}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"dgds"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sffs
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dgdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dgdsg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: dgds
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sffs') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('sffs', '2010-04-02 05:33:05', '2010-04-02 05:33:05')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 05:33:05', 42, 'dgds', '2010-04-02 05:33:05')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:33:05', 36, 'dgdg', '2010-04-02 05:33:05')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:33:05', 36, 'dgdsg', '2010-04-02 05:33:05')[0m
+Redirected to http://localhost:3000/surveys/42
+Completed in 234ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:03:05) [GET]
+  Parameters: {"id"=>"42"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 42) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 42) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 36) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/42]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:05:23) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:05:25) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:05:38) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"xcxv", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"gjg"}, "1"=>{"_delete"=>"", "content"=>"ghjhg"}, "2"=>{"_delete"=>"", "content"=>"ghkhg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"cvn"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: xcxv
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gjg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: ghjhg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: ghkhg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: cvn
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'xcxv') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('xcxv', '2010-04-02 05:35:38', '2010-04-02 05:35:38')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 05:35:38', 43, 'cvn', '2010-04-02 05:35:38')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:35:38', 37, 'gjg', '2010-04-02 05:35:38')[0m
+  [4;35;1mAnswer Create (15.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:35:38', 37, 'ghjhg', '2010-04-02 05:35:38')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:35:38', 37, 'ghkhg', '2010-04-02 05:35:38')[0m
+Redirected to http://localhost:3000/surveys/43
+Completed in 234ms (DB: 15) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:05:38) [GET]
+  Parameters: {"id"=>"43"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 43) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 43) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 37) [0m
+Completed in 235ms (View: 172, DB: 0) | 200 OK [http://localhost/surveys/43]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:06:45) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:06:48) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"43"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 43) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 43) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 37) [0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 60[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 61[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 62[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 37[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 43[0m
+Redirected to http://localhost:3000/surveys
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/surveys/43]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:06:48) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:06:51) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"42"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 42) [0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 42) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 36) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 58[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 59[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 36[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 42[0m
+Redirected to http://localhost:3000/surveys
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/surveys/42]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:06:51) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:06:53) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"40"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 40) [0m
+  [4;35;1mQuestion Load (16.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 40) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 33) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 51[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 52[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 53[0m
+  [4;36;1mQuestion Destroy (0.0ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 33[0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 40[0m
+Redirected to http://localhost:3000/surveys
+Completed in 375ms (DB: 16) | 302 Found [http://localhost/surveys/40]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:06:54) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:06:55) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:07:09) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"xz", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"1270186623535"=>{"_delete"=>"", "content"=>""}, "0"=>{"_delete"=>"", "content"=>"bc"}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"xvxc"}, "1270186625649"=>{"_delete"=>"1", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: xz
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: bc
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: xvxc
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'xz') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (62.0ms)
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:07:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"xzhfghgfj", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"bc"}}, "_delete"=>"", "content"=>"xvxc"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: xzhfghgfj
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: bc
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: xvxc
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'xzhfghgfj') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('xzhfghgfj', '2010-04-02 05:37:19', '2010-04-02 05:37:19')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 05:37:19', 44, 'xvxc', '2010-04-02 05:37:19')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 05:37:19', 38, 'bc', '2010-04-02 05:37:19')[0m
+Redirected to http://localhost:3000/surveys/44
+Completed in 422ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:07:20) [GET]
+  Parameters: {"id"=>"44"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 44) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 44) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 38) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/44]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:31:06) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:31:07) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:31:25) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+
+NameError (undefined local variable or method `asssociation_answer' for #<Question:0x45aa308>):
+  app/models/question.rb:11:in `validate_on_create'
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:34:18) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+
+NameError (undefined local variable or method `answer_fields' for #<Question:0x486e724>):
+  app/models/question.rb:11:in `validate_on_create'
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:37:22) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+
+NoMethodError (undefined method `valid_answer?' for #<Question:0x48c1b68>):
+  app/models/question.rb:11:in `validate_on_create'
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:37:59) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+
+NoMethodError (undefined method `valid_question?' for #<Question:0x492be8c>):
+  app/models/question.rb:11:in `validate_on_create'
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:38:43) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+
+NoMethodError (undefined method `valid_question?' for #<Question:0x47b6188>):
+  app/models/question.rb:11:in `validate'
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:44:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhdfhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fh"}, "1"=>{"_delete"=>"", "content"=>"fdg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fg"}, "2"=>{"_delete"=>"", "content"=>"fdg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhdfhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fdhdfhf') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fdhdfhf', '2010-04-02 06:14:19', '2010-04-02 06:14:19')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:14:19', 45, 'fhf', '2010-04-02 06:14:19')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:14:19', 39, 'fh', '2010-04-02 06:14:19')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:14:19', 39, 'fdg', '2010-04-02 06:14:19')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:14:19', 39, 'fdg', '2010-04-02 06:14:19')[0m
+Redirected to http://localhost:3000/surveys/45
+Completed in 188ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:44:20) [GET]
+  Parameters: {"id"=>"45"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 45) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (15.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 45) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 39) [0m
+Completed in 188ms (View: 141, DB: 15) | 200 OK [http://localhost/surveys/45]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:45:10) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:45:12) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `verify' for #<Class:0x47ce418>):
+  app/models/answer.rb:4
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:14:in `times'
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:49:08) [GET]
+
+SyntaxError (C:/surveysays/app/models/answer.rb:9: syntax error, unexpected kEND, expecting $end):
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:14:in `times'
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:49:24) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:49:47) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fhfd", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fhfg"}, "1"=>{"_delete"=>"", "content"=>"fhfdh"}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"fhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"cbcv"}, "2"=>{"_delete"=>"", "content"=>"fhf"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fhfd
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfdh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fhfd') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (0.0ms)
+Rendered surveys/_form (63.0ms)
+Completed in 266ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:49:52) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fhfdcvnhv", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fhfg"}, "1"=>{"_delete"=>"", "content"=>"fhfdh"}}, "_delete"=>"", "content"=>"fhf"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fhfdcvnhv
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfdh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fhfdcvnhv') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fhfdcvnhv', '2010-04-02 06:19:52', '2010-04-02 06:19:52')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:19:52', 46, 'fhf', '2010-04-02 06:19:52')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:19:52', 40, 'fhfg', '2010-04-02 06:19:52')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:19:52', 40, 'fhfdh', '2010-04-02 06:19:52')[0m
+Redirected to http://localhost:3000/surveys/46
+Completed in 187ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:49:52) [GET]
+  Parameters: {"id"=>"46"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 46) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 46) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 40) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/46]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:50:39) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"46"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 46) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 46) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 40) [0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 67[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 68[0m
+  [4;36;1mQuestion Destroy (0.0ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 40[0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 46[0m
+Redirected to http://localhost:3000/surveys
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/surveys/46]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:50:39) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:50:41) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (110.0ms)
+Completed in 344ms (View: 110, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:50:55) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sfsfdsf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"dg"}, "1"=>{"_delete"=>"", "content"=>"dg"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"dsfd"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"dgd"}, "2"=>{"_delete"=>"", "content"=>"dsg"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sfsfdsf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: dsfd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sfsfdsf') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('sfsfdsf', '2010-04-02 06:20:55', '2010-04-02 06:20:55')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:20:55', 47, 'dsfd', '2010-04-02 06:20:55')[0m
+  [4;36;1mAnswer Create (15.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:20:55', 41, 'dg', '2010-04-02 06:20:55')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:20:55', 41, 'dg', '2010-04-02 06:20:55')[0m
+Redirected to http://localhost:3000/surveys/47
+Completed in 171ms (DB: 15) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:50:55) [GET]
+  Parameters: {"id"=>"47"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 47) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 47) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 41) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/47]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-02 11:55:52) [GET]
+
+SyntaxError (C:/surveysays/app/controllers/surveys_controller.rb:55: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:56:27) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:56:28) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:56:39) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sdgfds", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdgds"}, "1"=>{"_delete"=>"", "content"=>"dsg"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"dgd"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"dsgd"}, "2"=>{"_delete"=>"", "content"=>"dsgd"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sdgfds
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdgds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: dgd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sdgfds') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 110ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:56:44) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sdgfdsxvcx", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"sdgds"}, "1"=>{"_delete"=>"", "content"=>"dsg"}}, "_delete"=>"", "content"=>"dgd"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sdgfdsxvcx
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: sdgds
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dsg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: dgd
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sdgfdsxvcx') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('sdgfdsxvcx', '2010-04-02 06:26:44', '2010-04-02 06:26:44')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:26:44', 48, 'dgd', '2010-04-02 06:26:44')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:26:44', 42, 'sdgds', '2010-04-02 06:26:44')[0m
+  [4;35;1mAnswer Create (16.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:26:44', 42, 'dsg', '2010-04-02 06:26:44')[0m
+Redirected to http://localhost:3000/surveys/48
+Completed in 390ms (DB: 16) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:56:44) [GET]
+  Parameters: {"id"=>"48"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 48) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 48) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 42) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/48]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:57:24) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:57:27) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"48"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 48) [0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 48) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 42) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 71[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 72[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 42[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 48[0m
+Redirected to http://localhost:3000/surveys
+Completed in 157ms (DB: 0) | 302 Found [http://localhost/surveys/48]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:57:27) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:57:29) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"47"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 47) [0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 47) [0m
+  [4;36;1mAnswer Load (16.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 41) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 69[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 70[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 41[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 47[0m
+Redirected to http://localhost:3000/surveys
+Completed in 218ms (DB: 16) | 302 Found [http://localhost/surveys/47]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:57:30) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:57:31) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"45"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 45) [0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 45) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 39) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 64[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 65[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 66[0m
+  [4;36;1mQuestion Destroy (0.0ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 39[0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 45[0m
+Redirected to http://localhost:3000/surveys
+Completed in 188ms (DB: 0) | 302 Found [http://localhost/surveys/45]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:57:32) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 11:57:33) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"44"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 44) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 44) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 38) [0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 63[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 38[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 44[0m
+Redirected to http://localhost:3000/surveys
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/surveys/44]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 11:57:34) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 11:57:35) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (141.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (172.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (250.0ms)
+Completed in 281ms (View: 250, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:57:48) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"cxbcbfgh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fhgfh"}, "2"=>{"_delete"=>"", "content"=>"gjgfj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: cxbcbfgh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+
+NoMethodError (undefined method `question' for #<Survey:0x489b01c>):
+  app/controllers/surveys_controller.rb:21:in `create'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:58:01) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"cxbcbfgh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fhgfh"}, "2"=>{"_delete"=>"", "content"=>"gjgfj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: cxbcbfgh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+
+ActionView::MissingTemplate (Missing template surveys/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:58:20) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"cxbcbfgh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fhgfh"}, "2"=>{"_delete"=>"", "content"=>"gjgfj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: cxbcbfgh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+
+ActionView::MissingTemplate (Missing template surveys/create.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-04-02 11:59:05) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"cxbcbfgh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fhgfh"}, "2"=>{"_delete"=>"", "content"=>"gjgfj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+
+SyntaxError (C:/surveysays/app/controllers/surveys_controller.rb:54: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 11:59:17) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"cxbcbfgh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fhgfh"}, "2"=>{"_delete"=>"", "content"=>"gjgfj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: cxbcbfgh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'cxbcbfgh') LIMIT 1[0m
+  [4;35;1mSurvey Create (15.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('cxbcbfgh', '2010-04-02 06:29:17', '2010-04-02 06:29:17')[0m
+Redirected to http://localhost:3000/surveys/49
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 49) [0m
+Completed in 141ms (DB: 15) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 11:59:17) [GET]
+  Parameters: {"id"=>"49"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 49) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 49) [0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/surveys/49]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 12:00:27) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"49"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 49) [0m
+  [4;36;1mQuestion Load (16.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 49) [0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 49[0m
+Redirected to http://localhost:3000/surveys
+Completed in 109ms (DB: 16) | 302 Found [http://localhost/surveys/49]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:00:27) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:00:28) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (109.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (0.0ms)
+Rendered surveys/_form (203.0ms)
+Completed in 234ms (View: 203, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:00:37) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sfdsgfdhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"dsgfdg"}, "1"=>{"_delete"=>"", "content"=>"dgsfd"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sfdsgfdhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:01:01) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sfdsgfdhf", "questions_attributes"=>{"1270189855285"=>{"_delete"=>"", "content"=>"xdbgcb"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sfdsgfdhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: xdbgcb
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'sfdsgfdhf') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('sfdsgfdhf', '2010-04-02 06:31:02', '2010-04-02 06:31:02')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:31:02', 50, 'xdbgcb', '2010-04-02 06:31:02')[0m
+Redirected to http://localhost:3000/surveys/50
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 12:01:02) [GET]
+  Parameters: {"id"=>"50"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 50) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 43) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/surveys/50]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 12:01:12) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"50"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 50) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 50) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 43) [0m
+  [4;36;1mQuestion Destroy (0.0ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 43[0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 50[0m
+Redirected to http://localhost:3000/surveys
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/surveys/50]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:01:12) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 266ms (View: 266, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:01:18) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:01:40) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fhfhfdfgdjgf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"gfjg"}, "2"=>{"_delete"=>"", "content"=>"gfjgjgh"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"fhhfghgf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"fghfghd"}, "2"=>{"_delete"=>"", "content"=>"gfdhghj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fhfhfdfgdjgf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfjg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfjgjgh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhhfghgf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fhfhfdfgdjgf') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fhfhfdfgdjgf', '2010-04-02 06:31:40', '2010-04-02 06:31:40')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:31:40', 51, 'fhhfghgf', '2010-04-02 06:31:40')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:31:40', 44, 'gfjg', '2010-04-02 06:31:40')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:31:40', 44, 'gfjgjgh', '2010-04-02 06:31:40')[0m
+Redirected to http://localhost:3000/surveys/51
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 12:01:40) [GET]
+  Parameters: {"id"=>"51"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 51) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 51) [0m
+  [4;36;1mAnswer Load (15.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 44) [0m
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/surveys/51]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 12:02:05) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"51"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 51) [0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 51) [0m
+  [4;35;1mAnswer Load (16.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 44) [0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 73[0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 74[0m
+  [4;36;1mQuestion Destroy (0.0ms)[0m   [0;1mDELETE FROM "questions" WHERE "id" = 44[0m
+  [4;35;1mSurvey Destroy (0.0ms)[0m   [0mDELETE FROM "surveys" WHERE "id" = 51[0m
+Redirected to http://localhost:3000/surveys
+Completed in 141ms (DB: 16) | 302 Found [http://localhost/surveys/51]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:02:05) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 172ms (View: 172, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:02:07) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (110.0ms)
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:02:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fgjgjhgkjh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"hgjhgj"}, "2"=>{"_delete"=>"", "content"=>"hgfjgjgh"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fgjgjhgkjh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_form (46.0ms)
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:04:37) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:04:43) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (47.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (141.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (234.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (328.0ms)
+Completed in 359ms (View: 328, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:04:57) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdhfdhgf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"ghjg"}, "2"=>{"_delete"=>"", "content"=>"hgjghj"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"ghjhgjghj"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>"ghjhgj"}, "2"=>{"_delete"=>"", "content"=>"ghjhgk"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdhfdhgf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: ghjg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: hgjghj
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: ghjhgjghj
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fdhfdhgf') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fdhfdhgf', '2010-04-02 06:34:57', '2010-04-02 06:34:57')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:34:57', 52, 'ghjhgjghj', '2010-04-02 06:34:57')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:34:57', 45, 'ghjg', '2010-04-02 06:34:57')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:34:57', 45, 'hgjghj', '2010-04-02 06:34:57')[0m
+Redirected to http://localhost:3000/surveys/52
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 12:04:57) [GET]
+  Parameters: {"id"=>"52"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 52) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 45) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/52]
+
+
+Processing SurveysController#destroy (for 127.0.0.1 at 2010-04-02 12:06:03) [DELETE]
+  Parameters: {"authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "id"=>"52"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 52) [0m
+  [4;35;1mQuestion Load (15.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 52) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 45) [0m
+  [4;35;1mAnswer Destroy (0.0ms)[0m   [0mDELETE FROM "answers" WHERE "id" = 75[0m
+  [4;36;1mAnswer Destroy (0.0ms)[0m   [0;1mDELETE FROM "answers" WHERE "id" = 76[0m
+  [4;35;1mQuestion Destroy (0.0ms)[0m   [0mDELETE FROM "questions" WHERE "id" = 45[0m
+  [4;36;1mSurvey Destroy (0.0ms)[0m   [0;1mDELETE FROM "surveys" WHERE "id" = 52[0m
+Redirected to http://localhost:3000/surveys
+Completed in 156ms (DB: 15) | 302 Found [http://localhost/surveys/52]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:06:03) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:06:04) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (140.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (156.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (234.0ms)
+Completed in 265ms (View: 234, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:06:09) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"sdfdsg", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: sdfdsg
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:14:30) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:14:31) [GET]
+
+SyntaxError (C:/surveysays/app/models/question.rb:17: syntax error, unexpected kEND, expecting $end):
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:14:45) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x49144d0>):
+  app/models/question.rb:10
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:17:21) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x47dd738>):
+  app/models/answer.rb:4
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:14:in `times'
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:20:36) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x48777fc>):
+  app/models/answer.rb:3
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:14:in `times'
+  app/controllers/surveys_controller.rb:14:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (219.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:21:00) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:21:11) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fdddhhfdhf", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fdddhhfdhf
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:21:15) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:21:18) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (156.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (235.0ms)
+Completed in 266ms (View: 235, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:21:31) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fhfhfd", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fdhfd"}, "1"=>{"_delete"=>"", "content"=>"fhfd"}, "2"=>{"_delete"=>"", "content"=>"fhf"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"fhfdhf"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fhfhfd
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdhfd
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfd
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhfdhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fhfhfd') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (63.0ms)
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:21:36) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"fhfhfdfdfd", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fdhfd"}, "1"=>{"_delete"=>"", "content"=>"fhfd"}, "2"=>{"_delete"=>"", "content"=>"fhf"}}, "_delete"=>"", "content"=>"fhfdhf"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fhfhfdfdfd
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fdhfd
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhfd
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: fhf
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: fhfdhf
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fhfhfdfdfd') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fhfhfdfdfd', '2010-04-02 06:51:36', '2010-04-02 06:51:36')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-02 06:51:36', 53, 'fhfdhf', '2010-04-02 06:51:36')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:51:36', 46, 'fdhfd', '2010-04-02 06:51:36')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:51:36', 46, 'fhfd', '2010-04-02 06:51:36')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-02 06:51:36', 46, 'fhf', '2010-04-02 06:51:36')[0m
+Redirected to http://localhost:3000/surveys/53
+Completed in 188ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-02 12:21:36) [GET]
+  Parameters: {"id"=>"53"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 53) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 46) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/53]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:23:40) [GET]
+  [4;36;1mSurvey Load (15.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 266ms (View: 188, DB: 15) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:23:41) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x486f890>):
+  app/models/question.rb:8
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:23:57) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `after_filter' for #<Class:0x47408c0>):
+  app/models/question.rb:8
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:24:29) [GET]
+
+NoMethodError (undefined method `[]' for :question_required:Symbol):
+  app/models/question.rb:8
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:25:33) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `only' for #<Class:0x4942344>):
+  app/models/question.rb:8
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:26:07) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x48099dc>):
+  app/models/question.rb:8
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:26:48) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x48a54e0>):
+  app/models/question.rb:9
+  app/controllers/surveys_controller.rb:13:in `new'
+  app/controllers/surveys_controller.rb:12:in `times'
+  app/controllers/surveys_controller.rb:12:in `new'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:27:32) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x4977bd4>):
+  app/models/survey.rb:9
+  app/controllers/surveys_controller.rb:11:in `new'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:28:03) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x487d738>):
+  app/models/survey.rb:9
+  app/controllers/surveys_controller.rb:11:in `new'
+
+Rendered rescues/_trace (188.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:28:46) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `before_filter' for #<Class:0x4984d48>):
+  app/models/survey.rb:9
+  app/controllers/surveys_controller.rb:11:in `new'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-02 12:28:57) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (109.0ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:29:11) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"dfhdgfh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"1", "content"=>""}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"1", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: dfhdgfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (157.0ms)
+Rendered surveys/_form (187.0ms)
+Completed in 281ms (View: 187, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:29:18) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"dfh"}}
+--- !ruby/object:Survey 
+attributes: 
+  name: dfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:29:20) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"dfh"}}
+--- !ruby/object:Survey 
+attributes: 
+  name: dfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (47.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-02 12:29:22) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"E8ysIHY3GL3HtN2KC/JnVFeXLDjnDPiNwGS0f9Ucezk=", "survey"=>{"name"=>"dfh"}}
+--- !ruby/object:Survey 
+attributes: 
+  name: dfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_form (46.0ms)
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-02 12:29:25) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-07 17:13:15) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (63.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (2016.0ms)
+Completed in 2203ms (View: 2094, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-07 17:13:51) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"jZXOnfZC0teD+IA1D2G6c2mLae+ZjF0Fon6TsX6qGnI=", "survey"=>{"name"=>"s1", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"a1"}, "1"=>{"_delete"=>"", "content"=>"a2"}, "2"=>{"_delete"=>"", "content"=>"a3"}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"as1"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"a1"}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"as2"}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"1", "content"=>""}, "1"=>{"_delete"=>"1", "content"=>""}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: s1
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a1
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a2
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a3
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: as1
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a1
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: as2
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 's1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (93.0ms)
+Completed in 203ms (View: 93, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-07 17:14:09) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"jZXOnfZC0teD+IA1D2G6c2mLae+ZjF0Fon6TsX6qGnI=", "survey"=>{"name"=>"asfdsgfdhg", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"a1"}, "1"=>{"_delete"=>"", "content"=>"a2"}, "2"=>{"_delete"=>"", "content"=>"a3"}}, "_delete"=>"", "content"=>"as1"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"a1"}}, "_delete"=>"", "content"=>"as2"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: asfdsgfdhg
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a1
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a2
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a3
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: as1
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: a1
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: as2
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'asfdsgfdhg') LIMIT 1[0m
+  [4;36;1mSurvey Create (15.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('asfdsgfdhg', '2010-04-07 11:44:09', '2010-04-07 11:44:09')[0m
+  [4;35;1mQuestion Create (16.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 54, 'as1', '2010-04-07 11:44:09')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 47, 'a1', '2010-04-07 11:44:09')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 47, 'a2', '2010-04-07 11:44:09')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 47, 'a3', '2010-04-07 11:44:09')[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 54, 'as2', '2010-04-07 11:44:09')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-07 11:44:09', 48, 'a1', '2010-04-07 11:44:09')[0m
+Redirected to http://localhost:3000/surveys/54
+Completed in 391ms (DB: 31) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-07 17:14:10) [GET]
+  Parameters: {"id"=>"54"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 54) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 54) [0m
+  [4;35;1mAnswer Load (15.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 47) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 48) [0m
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/surveys/54]
+
+
+Processing SurveysController#edit (for 127.0.0.1 at 2010-04-07 17:14:13) [GET]
+  Parameters: {"id"=>"54"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 54) [0m
+Rendering template within layouts/application
+Rendering surveys/edit
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 54) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 47) [0m
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+  [4;36;1mAnswer Load (16.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 48) [0m
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (63.0ms)
+Rendered surveys/_form (187.0ms)
+Completed in 219ms (View: 187, DB: 16) | 200 OK [http://localhost/surveys/54/edit]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-07 17:31:59) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (203.0ms)
+Completed in 328ms (View: 234, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-07 17:32:20) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"jZXOnfZC0teD+IA1D2G6c2mLae+ZjF0Fon6TsX6qGnI=", "survey"=>{"name"=>"fgjhgjhgk", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"dfg"}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"", "content"=>"etr"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: fgjhgjhgk
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: dfg
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: etr
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'fgjhgjhgk') LIMIT 1[0m
+  [4;35;1mSurvey Create (0.0ms)[0m   [0mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('fgjhgjhgk', '2010-04-07 12:02:20', '2010-04-07 12:02:20')[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-07 12:02:20', 55, 'etr', '2010-04-07 12:02:20')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-07 12:02:20', 49, 'dfg', '2010-04-07 12:02:20')[0m
+Redirected to http://localhost:3000/surveys/55
+Completed in 187ms (DB: 0) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-07 17:32:20) [GET]
+  Parameters: {"id"=>"55"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 55) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 55) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 49) [0m
+Completed in 125ms (View: 110, DB: 0) | 200 OK [http://localhost/surveys/55]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-22 09:59:38) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (46.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (1938.0ms)
+Completed in 2078ms (View: 1984, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-22 09:59:57) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"L8ro1pyReEqjZSSevUs3URPm9KBwFQjqL8XNwq3eKAY=", "survey"=>{"name"=>"gfhgfh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"gfhgfhgff"}, "1"=>{"_delete"=>"", "content"=>"gfhgfhgfh"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>"gfhgfhg"}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"1", "content"=>""}, "2"=>{"_delete"=>"1", "content"=>""}, "3"=>{"_delete"=>"1", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: gfhgfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfhgfhgff
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfhgfhgfh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: gfhgfhg
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'gfhgfh') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (94.0ms)
+Completed in 156ms (View: 109, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-22 10:00:02) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"L8ro1pyReEqjZSSevUs3URPm9KBwFQjqL8XNwq3eKAY=", "survey"=>{"name"=>"gfhgfhfghgfh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"gfhgfhgff"}, "1"=>{"_delete"=>"", "content"=>"gfhgfhgfh"}}, "_delete"=>"", "content"=>"gfhgfhg"}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: gfhgfhfghgfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+questions: 
+- !ruby/object:Question 
+  answers: 
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfhgfhgff
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  - !ruby/object:Answer 
+    attributes: 
+      updated_at: 
+      question_id: 
+      content: gfhgfhgfh
+      created_at: 
+    attributes_cache: {}
+
+    changed_attributes: 
+      content: 
+    new_record: true
+  attributes: 
+    updated_at: 
+    survey_id: 
+    content: gfhgfhg
+    created_at: 
+  attributes_cache: {}
+
+  changed_attributes: 
+    content: 
+  new_record: true
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT "surveys".id FROM "surveys" WHERE ("surveys"."name" = 'gfhgfhfghgfh') LIMIT 1[0m
+  [4;36;1mSurvey Create (0.0ms)[0m   [0;1mINSERT INTO "surveys" ("name", "updated_at", "created_at") VALUES('gfhgfhfghgfh', '2010-04-22 04:30:03', '2010-04-22 04:30:03')[0m
+  [4;35;1mQuestion Create (15.0ms)[0m   [0mINSERT INTO "questions" ("updated_at", "survey_id", "content", "created_at") VALUES('2010-04-22 04:30:03', 56, 'gfhgfhg', '2010-04-22 04:30:03')[0m
+  [4;36;1mAnswer Create (0.0ms)[0m   [0;1mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-22 04:30:03', 50, 'gfhgfhgff', '2010-04-22 04:30:03')[0m
+  [4;35;1mAnswer Create (0.0ms)[0m   [0mINSERT INTO "answers" ("updated_at", "question_id", "content", "created_at") VALUES('2010-04-22 04:30:03', 50, 'gfhgfhgfh', '2010-04-22 04:30:03')[0m
+Redirected to http://localhost:3000/surveys/56
+Completed in 344ms (DB: 15) | 302 Found [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:03) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (15.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 56) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 50) [0m
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/surveys/56]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:07) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:09) [GET]
+  Parameters: {"id"=>"56"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 56) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 50) [0m
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/surveys/56]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:10) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 156ms (View: 140, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:13) [GET]
+  Parameters: {"id"=>"38"}
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" WHERE ("surveys"."id" = 38) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM "questions" WHERE ("questions".survey_id = 38) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 29) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 30) [0m
+Completed in 172ms (View: 156, DB: 0) | 200 OK [http://localhost/surveys/38]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:14) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:16) [GET]
+  Parameters: {"id"=>"53"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 53) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 46) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/surveys/53]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:18) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:20) [GET]
+  Parameters: {"id"=>"56"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 56) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 56) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 50) [0m
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/surveys/56]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:21) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 172ms (View: 172, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:23) [GET]
+  Parameters: {"id"=>"53"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 53) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 53) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 46) [0m
+Completed in 172ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/53]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:25) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#show (for 127.0.0.1 at 2010-04-22 10:00:27) [GET]
+  Parameters: {"id"=>"54"}
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" WHERE ("surveys"."id" = 54) [0m
+Rendering template within layouts/application
+Rendering surveys/show
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM "questions" WHERE ("questions".survey_id = 54) [0m
+  [4;35;1mAnswer Load (0.0ms)[0m   [0mSELECT * FROM "answers" WHERE ("answers".question_id = 47) [0m
+  [4;36;1mAnswer Load (0.0ms)[0m   [0;1mSELECT * FROM "answers" WHERE ("answers".question_id = 48) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/surveys/54]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:00:29) [GET]
+  [4;35;1mSurvey Load (0.0ms)[0m   [0mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#index (for 127.0.0.1 at 2010-04-22 10:03:27) [GET]
+  [4;36;1mSurvey Load (0.0ms)[0m   [0;1mSELECT * FROM "surveys" [0m
+Rendering template within layouts/application
+Rendering surveys/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-04-22 10:03:30) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (32.0ms)
+Rendered surveys/_answer_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (141.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (172.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (0.0ms)
+Rendered surveys/_form (375.0ms)
+Completed in 485ms (View: 391, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-04-22 10:07:12) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"L8ro1pyReEqjZSSevUs3URPm9KBwFQjqL8XNwq3eKAY=", "survey"=>{"name"=>"gfgfdhfh", "questions_attributes"=>{"0"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>"fghgfhgf"}, "1"=>{"_delete"=>"", "content"=>"gfhgjgjhgjhg"}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"", "content"=>""}, "1"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}, "2"=>{"answers_attributes"=>{"0"=>{"_delete"=>"", "content"=>""}, "1"=>{"_delete"=>"", "content"=>""}, "2"=>{"_delete"=>"", "content"=>""}, "3"=>{"_delete"=>"", "content"=>""}}, "_delete"=>"1", "content"=>""}}}}
+--- !ruby/object:Survey 
+attributes: 
+  name: gfgfdhfh
+  updated_at: 
+  created_at: 
+attributes_cache: {}
+
+changed_attributes: 
+  name: 
+new_record: true
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (46.0ms)
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/surveys]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-14 12:38:00) [GET]
+
+ActionController::RoutingError (No route matches "/basic/home" with {:method=>:get}):
+  <internal:prelude>:10:in `synchronize'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-10-14 12:38:25) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (15.6ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (46.9ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.6ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.6ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (0.0ms)
+Rendered surveys/_form (1968.8ms)
+Completed in 2422ms (View: 2078, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-10-14 12:39:38) [POST]
+  Parameters: {"authenticity_token"=>"91cN7K9+TxWau3Dn7fughSMbl72qVTjUCVrljbTe3FQ=", "survey"=>{"name"=>"Database", "questions_attributes"=>{"0"=>{"_delete"=>"", "content"=>"what is normalisartion?", "answers_attributes"=>{"0"=>{"content"=>"a", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>"1"}, "2"=>{"content"=>"", "_delete"=>"1"}, "3"=>{"content"=>"", "_delete"=>"1"}, "1287040117644"=>{"content"=>"b", "_delete"=>""}, "1287040118692"=>{"content"=>"c", "_delete"=>""}}}, "1"=>{"_delete"=>"1", "content"=>"", "answers_attributes"=>{"0"=>{"content"=>"", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>""}, "2"=>{"content"=>"", "_delete"=>""}, "3"=>{"content"=>"", "_delete"=>""}}}, "2"=>{"_delete"=>"1", "content"=>"", "answers_attributes"=>{"0"=>{"content"=>"", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>""}, "2"=>{"content"=>"", "_delete"=>""}, "3"=>{"content"=>"", "_delete"=>""}}}}}, "commit"=>"Submit"}
+
+NoMethodError (undefined method `^' for "4":String):
+  <internal:prelude>:10:in `synchronize'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#create (for 127.0.0.1 at 2010-10-14 12:40:47) [POST]
+  Parameters: {"authenticity_token"=>"91cN7K9+TxWau3Dn7fughSMbl72qVTjUCVrljbTe3FQ=", "survey"=>{"name"=>"Database", "questions_attributes"=>{"0"=>{"_delete"=>"", "content"=>"what is normalisartion?", "answers_attributes"=>{"0"=>{"content"=>"a", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>"1"}, "2"=>{"content"=>"", "_delete"=>"1"}, "3"=>{"content"=>"", "_delete"=>"1"}, "1287040117644"=>{"content"=>"b", "_delete"=>""}, "1287040118692"=>{"content"=>"c", "_delete"=>""}}}, "1"=>{"_delete"=>"1", "content"=>"", "answers_attributes"=>{"0"=>{"content"=>"", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>""}, "2"=>{"content"=>"", "_delete"=>""}, "3"=>{"content"=>"", "_delete"=>""}}}, "2"=>{"_delete"=>"1", "content"=>"", "answers_attributes"=>{"0"=>{"content"=>"", "_delete"=>""}, "1"=>{"content"=>"", "_delete"=>""}, "2"=>{"content"=>"", "_delete"=>""}, "3"=>{"content"=>"", "_delete"=>""}}}}}, "commit"=>"Submit"}
+
+NoMethodError (undefined method `^' for "4":String):
+  <internal:prelude>:10:in `synchronize'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  D:/ROR/InstantRails/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (15.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-11-11 17:02:09) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (109.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (94.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (719.0ms)
+Completed in 891ms (View: 781, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-11-11 17:07:13) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (125.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-11-11 17:07:55) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (328.0ms)
+Completed in 469ms (View: 360, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-11-11 17:08:59) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (32.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (15.0ms)
+Rendered surveys/_form (125.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2010-11-11 17:09:26) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (125.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (328.0ms)
+Completed in 469ms (View: 359, DB: 0) | 200 OK [http://localhost/surveys/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-01-23 09:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/surveysays/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SurveysController#new (for 127.0.0.1 at 2011-01-23 09:51:47) [GET]
+Rendering template within layouts/application
+Rendering surveys/new
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (156.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (0.0ms)
+Rendered surveys/_answer_fields (15.0ms)
+Rendered surveys/_question_fields (31.0ms)
+Rendered surveys/_answer_fields (16.0ms)
+Rendered surveys/_question_fields (16.0ms)
+Rendered surveys/_form (765.0ms)
+Completed in 1031ms (View: 844, DB: 0) | 200 OK [http://localhost/surveys/new]
